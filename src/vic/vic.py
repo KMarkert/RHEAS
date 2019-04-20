@@ -7,8 +7,9 @@
 
 """
 
-from __future__ import division
-import output as vicoutput
+from __future__ import division, absolute_import
+
+import vic.output as vicoutput
 from osgeo import ogr, gdal, osr
 import decimal
 import sys

@@ -6,17 +6,20 @@
 .. moduleauthor:: Kostas Andreadis <kandread@jpl.nasa.gov>
 
 """
-
+from __future__ import absolute_import
 import os
-import ConfigParser
 import sys
 import dbio
 from datetime import datetime, timedelta
 import numpy as np
 import gzip
 import zipfile
-from decorators import geotiff, path
+from datasets.decorators import geotiff, path
 import logging
+if sys.version_info[0] == 2:
+    import ConfigParser
+else:
+    import configparser as ConfigParser
 
 
 def uncompress(filename, outpath):

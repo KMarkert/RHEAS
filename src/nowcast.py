@@ -6,6 +6,7 @@
 .. moduleauthor:: Kostas Andreadis <kandread@jpl.nasa.gov>
 
 """
+from __future__ import absolute_import
 
 import vic
 import config

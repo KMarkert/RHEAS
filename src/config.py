@@ -6,13 +6,16 @@
 .. moduleauthor:: Kostas Andreadis <kandread@jpl.nasa.gov>
 
 """
-
-import ConfigParser
 import sys
 import os
 import re
-import StringIO
 import logging
+if sys.version_info[0] == 2:
+    import ConfigParser
+    import StringIO
+else:
+    import configparser as ConfigParser
+    from io import StringIO
 
 
 def _readFromFile(config_filename):

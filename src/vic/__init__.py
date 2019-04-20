@@ -7,7 +7,7 @@
 
 """
 
-
-from vic import VIC
-import output
-import state
+from __future__ import absolute_import
+from vic.vic import VIC
+from vic import output
+from vic import state
